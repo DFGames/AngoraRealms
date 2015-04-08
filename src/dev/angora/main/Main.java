@@ -1,21 +1,20 @@
 package dev.angora.main;
 
-import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 import dev.angora.gui.GameGUI;
+import dev.angora.sound.GameSound;
 
 public class Main {
 	
     public static JFrame p = new JFrame("Angora Realms");
-    
+  
     public static GameGUI g = new GameGUI();
+    
+    public static boolean onMenu = true;
 	
     static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize(); 
     public static int width = (int) screenSize.getWidth();
@@ -33,10 +32,13 @@ public class Main {
         p.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         p.setSize((width/3), height - (height/10));
         p.add(g);
+        g.getImages();
         g.repaint();
+        g.panel = false;
         p.setLocationRelativeTo(null);
         p.setResizable(true);
         p.setVisible(true);
+        GameSound.startSoundLoop("Title.wav");
      
     }
 

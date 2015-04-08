@@ -10,9 +10,10 @@ public class Cards {
 
 	Random random = new Random();
 	
+	public static String card = null;
+	
 	public String getCard() {
 		
-		String card = null;
 		String[] possibleCards = new String[] {"Cheetah", "Cheetah", "Cheetah", "Lion", "Lion", "Lion", "Hyena", "Hyena", "Hyena", "Rhino", "SnakePit", "SnakePit"};
 		
 		card = possibleCards[random.nextInt(12)];
