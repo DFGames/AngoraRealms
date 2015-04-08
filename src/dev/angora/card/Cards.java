@@ -13,10 +13,9 @@ public class Cards {
 	public String getCard() {
 		
 		String card = null;
-		String[] possibleCards = new String[] {"Cheetah", "Lion"};
+		String[] possibleCards = new String[] {"Cheetah", "Cheetah", "Cheetah", "Lion", "Lion", "Lion", "Hyena", "Hyena", "Hyena", "Rhino", "SnakePit", "SnakePit"};
 		
-		card = possibleCards[random.nextInt(2)];
-		System.out.println(card);
+		card = possibleCards[random.nextInt(12)];
 	
 		return card;
 		
@@ -33,7 +32,6 @@ public class Cards {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 		return img;
 	}
 	

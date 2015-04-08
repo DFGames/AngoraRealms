@@ -33,6 +33,7 @@ public class Main {
         p.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         p.setSize((width/3), height - (height/10));
         p.add(g);
+        g.repaint();
         p.setLocationRelativeTo(null);
         p.setResizable(true);
         p.setVisible(true);

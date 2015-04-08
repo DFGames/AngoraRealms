@@ -12,7 +12,6 @@ public class ClickListener extends MouseAdapter {
 
 	public void mousePressed(MouseEvent e){
 
-		System.out.println("ayyyyyyyyyyyyyy");
 		Main.g.drawCards();
 		
     }
